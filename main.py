@@ -10,7 +10,7 @@ from flask_cors import CORS
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-client = genai.Client(api_key="AIzaSyByK-r7Tmi23AKSideBk21kli1_osfgiPY")
+client = genai.Client(api_key="")
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS
@@ -145,4 +145,5 @@ def analyze():
 # RUN
 # ==============================
 if __name__ == "__main__":
+
     app.run(debug=True, port=8080)
